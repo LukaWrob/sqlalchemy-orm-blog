@@ -3,7 +3,8 @@ from models import Author, Article
 from faker import Faker
 
 def main():
-    author = session.query(Author).filter_by(user_name="sammy").one()
+    # author = session.query(Author).filter_by(user_name="sammy").one()
+    author = session.query(Author).get(4)
 
     fake = Faker()
     article = Article(
